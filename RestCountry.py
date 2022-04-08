@@ -7,7 +7,6 @@ def getinfo(head):
     api = "https://restcountries.com/v3.1/name/" + user_rqst
     rqst = requests.get(api)
     rqst_data = json.loads(rqst.text) # List with dict inside
-    #currency =  (rqst_data[0]["currencies"]["PEN"]["name"])
     timezones = rqst_data[0]["timezones"][0]
     capital = rqst_data[0]["capital"][0]
     population = str(rqst_data[0]["population"])
